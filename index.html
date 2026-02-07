@@ -1,167 +1,178 @@
-<!DOCTYPE html>
-<html lang="te">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Munaf Learning – Stock Market Education (Telugu)</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Munaf Learning</title>
 
-<!-- Meta Pixel Code -->
-<script>
-!function(f,b,e,v,n,t,s)
-{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-n.queue=[];t=b.createElement(e);t.async=!0;
-t.src=v;s=b.getElementsByTagName(e)[0];
-s.parentNode.insertBefore(t,s)}(window, document,'script',
-'https://connect.facebook.net/en_US/fbevents.js');
-fbq('init', '1561378755154820');
-fbq('track', 'PageView');
-</script>
-<noscript>
-<img height="1" width="1" style="display:none"
-src="https://www.facebook.com/tr?id=1561378755154820&ev=PageView&noscript=1"/>
-</noscript>
-<!-- End Meta Pixel Code -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+  <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet"> 
+
+  <script async src="https://connect.facebook.net/en_US/fbevents.js"></script>
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Meta Pixel Code -->
+  <script>
+  !function(f,b,e,v,n,t,s)
+  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+  n.queue=[];t=b.createElement(e);t.async=!0;
+  t.src=v;s=b.getElementsByTagName(e)[0];
+  s.parentNode.insertBefore(t,s)}(window, document,'script',
+  'https://connect.facebook.net/en_US/fbevents.js');
+  fbq('init', '1561378755154820');
+  fbq('track', 'PageView');
+  </script>
+
+  <noscript>
+    <img height="1" width="1" style="display:none"
+    src="https://www.facebook.com/tr?id=1561378755154820&ev=PageView&noscript=1"/>
+  </noscript>
+  <!-- End Meta Pixel Code -->
 
 <style>
-body{
-    margin:0;
-    font-family: Arial, Helvetica, sans-serif;
-    background:#f6f8fb;
-    color:#222;
-}
-
-.container{
-    max-width:900px;
-    margin:auto;
-    padding:20px;
-}
-
-.hero{
-    background:#0f172a;
-    color:#fff;
-    padding:40px 20px;
-    border-radius:12px;
-    text-align:center;
-}
-
-.brand{
-    font-size:20px;
-    font-weight:bold;
-    margin-bottom:10px;
-    letter-spacing:1px;
-}
-
-.hero h1{
-    margin-bottom:10px;
-    font-size:28px;
-}
-
-.hero p{
-    font-size:16px;
-    opacity:0.9;
-}
-
-.btn{
-    display:inline-block;
-    margin-top:20px;
-    padding:14px 28px;
-    background:#22c55e;
-    color:#000;
-    text-decoration:none;
-    font-weight:bold;
-    border-radius:30px;
-}
-
-.section{
-    margin-top:30px;
-    background:#fff;
-    padding:25px;
-    border-radius:12px;
-}
-
-.section h2{
-    margin-top:0;
-}
-
-ul{
-    padding-left:20px;
-}
-
-ul li{
-    margin-bottom:8px;
-}
-
-.footer{
-    margin-top:25px;
-    font-size:13px;
-    color:#555;
-    line-height:1.6;
-}
+body{font-family:"Ubuntu",sans-serif;}
+@keyframes bgShift{0%{background-position:0% 50%}50%{background-position:100% 50%}100%{background-position:0% 50%}}
+.animated-bg{background:linear-gradient(90deg,#fff7ed 0%,#dff7ea 30%,#fff1f2 60%,#f7f7ff 100%);background-size:200% 200%;animation:bgShift 12s ease infinite;}
+@keyframes floaty{0%{transform:translateY(0)}50%{transform:translateY(-8px) rotate(-1deg)}100%{transform:translateY(0)}}
+.floaty{animation:floaty 3.5s ease-in-out infinite;}
+@keyframes popIn{0%{transform:scale(.6);opacity:0;filter:blur(6px)}60%{transform:scale(1.05);opacity:1;filter:blur(0)}100%{transform:scale(1)}}
+.pop-in{animation:popIn 700ms cubic-bezier(.2,.9,.3,1) both;}
+.cta-pulse{transition:transform .15s ease,box-shadow .15s ease;}
+.cta-pulse:hover{transform:translateY(-4px) scale(1.02);box-shadow:0 18px 40px rgba(16,185,129,.18);}
+.cta-press:active{transform:translateY(1px) scale(.995);}
+.glow-text{text-shadow:0 8px 24px rgba(255,59,48,.08);}
+.sparkle{position:absolute;width:10px;height:10px;border-radius:50%;background:radial-gradient(circle at 30% 30%,rgba(255,255,255,.95),rgba(255,255,255,.2));opacity:0;filter:blur(.6px);animation:sparkleAnim 3.5s linear infinite;}
+@keyframes sparkleAnim{0%{transform:translateY(0) scale(.6);opacity:0}10%{opacity:1}60%{opacity:.6;transform:translateY(-60px) scale(1.1)}100%{opacity:0;transform:translateY(-120px) scale(.8)}}
+.flip{perspective:400px;}
+.flip .digit{display:inline-block;transform-origin:center;transition:transform .35s cubic-bezier(.2,.9,.3,1);}
+.flip .digit.flip-animate{transform:rotateX(-180deg);}
+@media(max-width:420px){.count-box{padding:.5rem .75rem}.w-max-hero{width:120px;height:120px}}
 </style>
 </head>
 
-<body>
+<body class="min-h-screen flex items-center justify-center animated-bg">
 
-<div class="container">
+<main class="w-full max-w-md p-5">
+<section class="relative bg-white/90 backdrop-blur rounded-3xl shadow-2xl border border-gray-100 overflow-hidden pop-in">
 
-    <!-- HERO -->
-    <div class="hero">
-        <div class="brand">Munaf Learning</div>
-        <h1>స్టాక్ మార్కెట్ నేర్చుకోండి – సరైన మార్గంలో</h1>
-        <p>
-            Munaf Learning ద్వారా స్టాక్ మార్కెట్‌ను బేసిక్ నుండి అడ్వాన్స్ వరకు
-            అర్థం చేసుకోవడానికి మా టెలిగ్రామ్ లెర్నింగ్ ఛానల్‌లో చేరండి.
-        </p>
-
-        <a class="btn"
-           href="https://t.me/+Y10n3kPmHUxiM2Q1"
-           target="_blank"
-           onclick="fbq('track','Lead');">
-            టెలిగ్రామ్ ఛానల్‌లో చేరండి
-        </a>
-    </div>
-
-    <!-- WHAT YOU GET -->
-    <div class="section">
-        <h2>మీకు ఏమి లభిస్తుంది?</h2>
-        <ul>
-            <li>స్టాక్ మార్కెట్ బేసిక్స్</li>
-            <li>చార్ట్ రీడింగ్ మరియు మార్కెట్ అవగాహన</li>
-            <li>రిస్క్ మేనేజ్‌మెంట్ కాన్సెప్ట్స్</li>
-            <li>డైలీ మార్కెట్ లెర్నింగ్ అప్డేట్స్</li>
-        </ul>
-    </div>
-
-    <!-- WHO SHOULD JOIN -->
-    <div class="section">
-        <h2>ఎవరికి ఉపయోగపడుతుంది?</h2>
-        <ul>
-            <li>స్టాక్ మార్కెట్ నేర్చుకోవాలనుకునే వారు</li>
-            <li>బిగినర్స్</li>
-            <li>మార్కెట్‌ను సరిగ్గా అర్థం చేసుకోవాలనుకునే వారు</li>
-        </ul>
-    </div>
-
-    <!-- TRUST -->
-    <div class="section">
-        <h2>మా లక్ష్యం</h2>
-        <p>
-            Munaf Learning లో మేము స్టాక్ మార్కెట్‌పై విద్యా మరియు అవగాహన కంటెంట్ మాత్రమే
-            అందిస్తాము. మా లక్ష్యం మీకు సరైన లెర్నింగ్ ఇవ్వడం.
-        </p>
-    </div>
-
-    <!-- DISCLAIMER -->
-    <div class="section footer">
-        <strong>డిస్క్లైమర్ :</strong><br>
-        ఈ కంటెంట్ పూర్తిగా విద్యా (Educational) ఉద్దేశ్యాల కోసం మాత్రమే.
-        మేము ఎలాంటి ఇన్వెస్ట్‌మెంట్ సలహా ఇవ్వము.
-        పెట్టుబడి చేసే ముందు మీ స్వంత పరిశీలన చేయండి.
-    </div>
-
+<div aria-hidden="true" class="absolute inset-0 pointer-events-none">
+  <div class="sparkle" style="left:12%;top:14%"></div>
+  <div class="sparkle" style="left:20%;top:6%"></div>
+  <div class="sparkle" style="left:50%;top:20%"></div>
+  <div class="sparkle" style="left:86%;top:8%"></div>
 </div>
 
+<div class="px-6 pt-5">
+  <div class="text-xs font-extrabold tracking-widest text-red-600 uppercase text-center">
+    OFFICIAL LEARNING COMMUNITY
+  </div>
+</div>
+
+<div class="p-6 flex flex-col items-center text-center">
+
+  <div class="relative">
+    <img src="radika.jpg" class="w-40 h-40 object-cover rounded-full shadow-2xl floaty w-max-hero">
+  </div>
+
+  <h1 class="mt-5 text-lg md:text-xl font-extrabold text-gray-800 glow-text">
+    Learn Stock Market With
+  </h1>
+
+  <div class="mt-3">
+    <span class="bg-gradient-to-r from-yellow-400 via-orange-400 to-red-500 text-white font-black px-4 py-2 rounded-full">
+      Munaf Learning
+    </span>
+  </div>
+
+  <div class="mt-6 w-full">
+    <a href="https://t.me/+Y10n3kPmHUxiM2Q1">
+      <button id="joinBtn"
+        class="w-full cta-pulse cta-press bg-emerald-500/95 hover:bg-emerald-600 text-white font-extrabold py-3 rounded-full shadow-lg">
+        JOIN TELEGRAM CHANNEL
+      </button>
+    </a>
+  </div>
+
+  <div class="mt-4 text-xs uppercase text-gray-500 font-semibold">
+    Educational & Learning Content Only
+  </div>
+
+  <div class="mt-6">
+    <div class="text-2xl font-extrabold text-red-500">Hurry Up!</div>
+  </div>
+
+  <div class="mt-4 flex items-center justify-center gap-3">
+    <div class="count-box bg-gray-50 rounded-xl px-5 py-3 text-center shadow-sm">
+      <div class="text-[10px] font-semibold text-gray-400">HRS</div>
+      <div id="hrs" class="text-2xl font-extrabold flip"><span class="digit">00</span></div>
+    </div>
+    <div class="count-box bg-gray-50 rounded-xl px-5 py-3 text-center shadow-sm">
+      <div class="text-[10px] font-semibold text-gray-400">MINS</div>
+      <div id="mins" class="text-2xl font-extrabold flip"><span class="digit">00</span></div>
+    </div>
+    <div class="count-box bg-gray-50 rounded-xl px-5 py-3 text-center shadow-sm">
+      <div class="text-[10px] font-semibold text-gray-400">SECS</div>
+      <div id="secs" class="text-2xl font-extrabold flip"><span class="digit">08</span></div>
+    </div>
+  </div>
+
+  <div id="doneMsg" class="mt-3 text-sm text-gray-400 opacity-0 transition-opacity">
+    Time expired — Hurry Back!
+  </div>
+
+</div>
+</section>
+</main>
+
+<script>
+(function(){
+
+let totalSeconds = 8;
+
+const hrsEl=document.getElementById('hrs');
+const minsEl=document.getElementById('mins');
+const secsEl=document.getElementById('secs');
+const doneMsg=document.getElementById('doneMsg');
+const joinBtn=document.getElementById('joinBtn');
+
+function setText(el,value){
+const digit=el.querySelector('.digit');
+digit.classList.add('flip-animate');
+setTimeout(()=>{digit.textContent=value;digit.classList.remove('flip-animate');},180);
+}
+
+function render(){
+const hrs=Math.floor(totalSeconds/3600);
+const mins=Math.floor((totalSeconds%3600)/60);
+const secs=totalSeconds%60;
+setText(hrsEl,String(hrs).padStart(2,'0'));
+setText(minsEl,String(mins).padStart(2,'0'));
+setText(secsEl,String(secs).padStart(2,'0'));
+}
+
+render();
+
+const tick=setInterval(()=>{
+if(totalSeconds<=0){
+clearInterval(tick);
+doneMsg.style.opacity='1';
+joinBtn.classList.add('animate-pulse');
+setTimeout(()=>{
+window.location.href='https://t.me/+Y10n3kPmHUxiM2Q1';
+},800);
+return;
+}
+totalSeconds--;
+render();
+},1000);
+
+joinBtn.addEventListener('click',()=>{
+fbq('track','Lead');
+window.location.href='https://t.me/+Y10n3kPmHUxiM2Q1';
+});
+
+})();
+</script>
+
 </body>
-</html>
